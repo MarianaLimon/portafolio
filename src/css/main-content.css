@@ -1,19 +1,45 @@
+/* ===============================
+   MAIN WRAPPER
+================================= */
+
 .main-content {
   margin-top: 60px;
+  max-width: 1200px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px; /* respiración lateral */
 }
+
+
+/* ===============================
+   GRID LAYOUT
+================================= */
 
 .main-grid {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 30px;
+  align-items: start;
 }
+
+
+/* ===============================
+   COLUMNS
+================================= */
 
 .main-left,
 .main-right {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  min-width: 0; /* 🔥 evita desbordes internos */
 }
+
+
+/* ===============================
+   RESPONSIVE
+================================= */
 
 @media (max-width: 1000px) {
   .main-grid {
