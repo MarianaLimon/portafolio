@@ -1,0 +1,117 @@
+/* ===============================
+   HEADER (GLASS STYLE)
+================================= */
+
+.header {
+  width: 100%;
+  box-sizing: border-box; /* ← importante */
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 16px 24px;
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
+  margin-bottom: 50px;
+}
+
+/* Left */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.logo-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+
+  background: linear-gradient(135deg, #c9b2ff, #9f6ff3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  font-weight: 600;
+  letter-spacing: 1px;
+
+  box-shadow: 0 8px 20px rgba(150, 100, 255, 0.35);
+}
+
+.brand-name {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #2f2f3a;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.nav a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #5b5b70;
+  transition: 0.2s ease;
+}
+
+.nav a:hover {
+  color: #8f5df6;
+}
+
+/* Contact Button */
+.contact-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px 22px;
+  border-radius: 10px;
+
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+
+  font-weight: 500;
+  color: #3a3a4a;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.contact-btn:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 22px;
+  color: #5b5b70;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+  .nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+}

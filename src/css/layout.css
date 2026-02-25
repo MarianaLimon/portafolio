@@ -1,0 +1,13 @@
+.layout {
+  width: 100%;
+  max-width: 65rem;
+  margin: 0 auto; 
+  padding: 60px 24px 80px;
+}
+
+@media (max-width: 1000px) {
+  .layout {
+    width: 90%;
+    padding: 20px 15px 60px;
+  }
+}
