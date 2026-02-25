@@ -1,0 +1,74 @@
+/* ===============================
+   EDUCATION TIMELINE
+================================= */
+
+.timeline {
+  position: relative;
+  margin-top: 10px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 21px;
+  top: 15px;
+  bottom: 15px;
+  width: 2px;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(143, 93, 246, 0.5),
+    rgba(143, 93, 246, 0.1)
+  );
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  align-items: start;
+  margin-bottom: 45px;
+  position: relative;
+
+  transition: transform 0.25s ease;
+}
+
+.timeline-item:hover {
+  transform: translateX(6px);
+}
+
+/* Year circle */
+.timeline-year {
+  width: 42px;
+  height: 42px;
+
+  background: linear-gradient(135deg, #a98bff, #8f5df6);
+  color: #ffffff;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  box-shadow: 0 12px 28px rgba(143, 93, 246, 0.35);
+
+  position: relative;
+  z-index: 1;
+}
+
+/* Content */
+.timeline-content h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #2d2d38;
+}
+
+.timeline-content p {
+  margin: 6px 0 0;
+  font-size: 15px;
+  color: #6a6a85;
+}

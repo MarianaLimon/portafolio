@@ -1,3 +1,22 @@
+.main-content {
+  margin-top: 60px;
+}
+
 .main-grid {
-    text-align: center;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+}
+
+.main-left,
+.main-right {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+@media (max-width: 1000px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
 }
