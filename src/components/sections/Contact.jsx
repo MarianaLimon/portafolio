@@ -42,15 +42,6 @@ export default function Contact() {
           Coacalco, Edo. México
         </span>
 
-        <a
-          href="https://www.linkedin.com/in/mariana-limon-932053134"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaLinkedin className="contact-icon" />
-          LinkedIn
-        </a>
-
       </div>
 
     </SectionCard>

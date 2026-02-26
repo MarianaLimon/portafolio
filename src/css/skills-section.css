@@ -1,0 +1,44 @@
+/* ===============================
+   SKILLS GROUP
+================================= */
+
+.skills-group {
+  margin-top: 20px;
+}
+
+.skills-group h4 {
+  margin-bottom: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #2d2d38;
+}
+
+/* ===============================
+   TAGS
+================================= */
+
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills-tags span {
+  padding: 6px 14px;
+  border-radius: 20px;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  border: 1px solid rgba(143, 93, 246, 0.3);
+  color: #4a4a5a;
+  background: rgba(143, 93, 246, 0.06);
+
+  transition: 0.25s ease;
+}
+
+.skills-tags span:hover {
+  background: #8f5df6;
+  color: white;
+  transform: translateY(-2px);
+}

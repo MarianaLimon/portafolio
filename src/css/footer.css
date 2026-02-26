@@ -1,0 +1,92 @@
+/* ===============================
+   FOOTER WRAPPER
+================================= */
+
+.footer-wrapper {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* ===============================
+   GLASS CONTAINER
+================================= */
+
+.footer-glass {
+  width: 100%;
+  max-width: 900px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 16px 24px;
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* ===============================
+   LINKS
+================================= */
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.footer-links a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  text-decoration: none;
+  font-weight: 500;
+  color: #5b5b70;
+
+  transition: 0.2s ease;
+}
+
+.footer-links a svg {
+  color: #8f5df6;
+}
+
+.footer-links a:hover {
+  color: #8f5df6;
+}
+
+/* ===============================
+   COPY
+================================= */
+
+.footer-copy {
+  font-size: 13px;
+  color: #8b8ba5;
+}
+
+/* ===============================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 768px) {
+
+  .footer-glass {
+    padding: 14px 18px;
+  }
+
+  .footer-links {
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+}

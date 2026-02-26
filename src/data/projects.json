@@ -1,0 +1,29 @@
+[
+  {
+    "slug": "ecommerce-wordpress",
+    "title": "E-commerce WordPress",
+    "description": "Tienda online optimizada con WooCommerce.",
+    "image": "/images/ecommerce.jpg",
+    "tech": ["WordPress", "WooCommerce", "SEO"],
+    "github": "https://github.com/tuusuario/ecommerce",
+    "demo": "https://tusitio.com"
+  },
+  {
+    "slug": "landing-react",
+    "title": "Landing React",
+    "description": "Landing page optimizada con React y animaciones.",
+    "image": "/images/landing.jpg",
+    "tech": ["React", "CSS", "Performance"],
+    "github": "https://github.com/tuusuario/landing",
+    "demo": "https://tusitio.com"
+  },
+  {
+    "slug": "sistema-interno",
+    "title": "Sistema Interno",
+    "description": "Panel administrativo con Node y MongoDB.",
+    "image": "/images/sistema.jpg",
+    "tech": ["Node.js", "MongoDB", "Express"],
+    "github": "https://github.com/tuusuario/sistema",
+    "demo": "https://tusitio.com"
+  }
+]
