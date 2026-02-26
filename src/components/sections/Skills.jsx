@@ -4,67 +4,69 @@ import "../../css/skills-section.css";
 
 export default function Skills() {
   return (
-    <SectionCard>
+    <section id="skills">
+      <SectionCard>
 
-      <SectionTitle>Skills</SectionTitle>
+        <SectionTitle>Skills</SectionTitle>
 
-      {/* Frontend */}
-      <div className="skills-group">
-        <h4>Lenguajes & Frontend</h4>
-        <div className="skills-tags">
-          <span>HTML5</span>
-          <span>CSS3 / SASS</span>
-          <span>JavaScript (ES6+)</span>
-          <span>React.js</span>
-          <span>Bootstrap</span>
+        {/* Frontend */}
+        <div className="skills-group">
+          <h4>Lenguajes & Frontend</h4>
+          <div className="skills-tags">
+            <span>HTML5</span>
+            <span>CSS3 / SASS</span>
+            <span>JavaScript (ES6+)</span>
+            <span>React.js</span>
+            <span>Bootstrap</span>
+          </div>
         </div>
-      </div>
 
-      {/* Backend */}
-      <div className="skills-group">
-        <h4>Backend</h4>
-        <div className="skills-tags">
-          <span>Node.js</span>
-          <span>Express</span>
-          <span>PHP</span>
-          <span>MongoDB</span>
-          <span>REST APIs</span>
+        {/* Backend */}
+        <div className="skills-group">
+          <h4>Backend</h4>
+          <div className="skills-tags">
+            <span>Node.js</span>
+            <span>Express</span>
+            <span>PHP</span>
+            <span>MongoDB</span>
+            <span>REST APIs</span>
+          </div>
         </div>
-      </div>
 
-      {/* Herramientas */}
-      <div className="skills-group">
-        <h4>Herramientas & Control de Versiones</h4>
-        <div className="skills-tags">
-          <span>Git</span>
-          <span>GitHub</span>
-          <span>VPS / Hosting</span>
-          <span>Performance Web</span>
+        {/* Herramientas */}
+        <div className="skills-group">
+          <h4>Herramientas & Control de Versiones</h4>
+          <div className="skills-tags">
+            <span>Git</span>
+            <span>GitHub</span>
+            <span>VPS / Hosting</span>
+            <span>Performance Web</span>
+          </div>
         </div>
-      </div>
 
-      {/* CMS */}
-      <div className="skills-group">
-        <h4>CMS & Web</h4>
-        <div className="skills-tags">
-          <span>WordPress</span>
-          <span>WooCommerce</span>
-          <span>Responsive Design</span>
-          <span>Maquetación Pixel-Perfect</span>
+        {/* CMS */}
+        <div className="skills-group">
+          <h4>CMS & Web</h4>
+          <div className="skills-tags">
+            <span>WordPress</span>
+            <span>WooCommerce</span>
+            <span>Responsive Design</span>
+            <span>Maquetación Pixel-Perfect</span>
+          </div>
         </div>
-      </div>
 
-      {/* Diseño */}
-      <div className="skills-group">
-        <h4>Diseño & Producción</h4>
-        <div className="skills-tags">
-          <span>Adobe Photoshop</span>
-          <span>Adobe Illustrator</span>
-          <span>Email Templates</span>
-          <span>Optimización SEO Técnico</span>
+        {/* Diseño */}
+        <div className="skills-group">
+          <h4>Diseño & Producción</h4>
+          <div className="skills-tags">
+            <span>Adobe Photoshop</span>
+            <span>Adobe Illustrator</span>
+            <span>Email Templates</span>
+            <span>Optimización SEO Técnico</span>
+          </div>
         </div>
-      </div>
 
-    </SectionCard>
+      </SectionCard>
+    </section>
   );
 }

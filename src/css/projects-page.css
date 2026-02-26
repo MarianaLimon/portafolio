@@ -1,0 +1,237 @@
+.projects-page {
+  margin-top: 80px;
+}
+
+/* =========================
+   Layout
+========================= */
+
+.projects-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 60px;
+  margin-top: 40px;
+}
+
+.project-main {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+/* =========================
+   Laptop Mockup
+========================= */
+
+.laptop-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.laptop-body {
+  width: 100%;
+  max-width: 720px;
+  background: #1a1a1a;
+  border-radius: 20px;
+  padding: 16px;
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.35),
+    0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.laptop-screen-container {
+  width: 100%;
+  height: 420px;
+  background: black;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+}
+
+.laptop-screen-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* =========================
+   Screen Controls
+========================= */
+
+.screen-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 14px;
+  z-index: 10;
+}
+
+.screen-controls button {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
+  background: linear-gradient(135deg, #a98bff, #8f5df6); 
+  backdrop-filter: blur(10px);
+
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.screen-controls button:hover {
+  background: rgba(187, 51, 236, 0.42);
+  border: none;
+
+  box-shadow:
+    0 10px 25px rgba(143, 93, 246, 0.4);
+
+  transform: translateY(-2px);
+}
+
+/* =========================
+   Laptop Base
+========================= */
+
+.laptop-base {
+  width: 75%;
+  height: 18px;
+  background: linear-gradient(to bottom, #e4e4e4, #bfbfbf);
+  border-radius: 0 0 24px 24px;
+  margin-top: -6px;
+}
+
+/* =========================
+   Project Info
+========================= */
+
+.project-info h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.project-info p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Tech tags */
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.tech-tags span {
+  padding: 8px 16px;
+  border-radius: 14px;
+
+  background: rgba(143, 93, 246, 0.08);
+  color: #8f5df6;
+  border: 1px solid rgba(143, 93, 246, 0.2);
+
+  font-size: 14px;
+}
+
+/* Buttons */
+
+.project-buttons {
+  display: flex;
+  gap: 18px;
+  margin-top: 10px;
+}
+
+.project-buttons a {
+  padding: 12px 24px;
+  border-radius: 14px;
+
+  background: linear-gradient(135deg, #a98bff, #8f5df6);
+  color: white;
+  text-decoration: none;
+
+  font-weight: 500;
+  transition: all 0.25s ease;
+
+  box-shadow:
+    0 10px 25px rgba(143, 93, 246, 0.35);
+}
+
+.project-buttons a:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 14px 35px rgba(143, 93, 246, 0.45);
+}
+
+/* =========================
+   Sidebar
+========================= */
+
+.projects-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sidebar-item {
+  padding: 16px 20px;
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(10px);
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.sidebar-item:hover {
+  background: rgba(143, 93, 246, 0.15);
+}
+
+.sidebar-item.active {
+  background: linear-gradient(135deg, #a98bff, #8f5df6);
+  color: white;
+
+  box-shadow:
+    0 10px 25px rgba(143, 93, 246, 0.35);
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 1000px) {
+
+  .projects-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-sidebar {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .sidebar-item {
+    min-width: 180px;
+  }
+
+  .laptop-screen-container {
+    height: 300px;
+  }
+
+}

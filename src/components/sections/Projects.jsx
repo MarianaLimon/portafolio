@@ -1,11 +1,23 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import SectionCard from "../ui/SectionCard";
 import SectionTitle from "../ui/SectionTitle";
 import "../../css/projects-section.css";
 import projects from "../../data/projects.json";
 
+/* Carga dinámica imágenes */
+const images = import.meta.glob("/src/assets/images/*", {
+  eager: true,
+});
+
+const getImage = (filename) => {
+  const path = `/src/assets/images/${filename}`;
+  return images[path]?.default;
+};
+
 export default function Projects() {
 
+  const navigate = useNavigate();
   const [index, setIndex] = useState(0);
 
   const maxIndex = projects.length - 2;
@@ -33,11 +45,16 @@ export default function Projects() {
           style={{ transform: `translateX(-${index * 50}%)` }}
         >
           {projects.map((project, i) => (
-            <div className="project-slide" key={i}>
+            <div className="project-slide" key={project.slug}>
               <div className="project-card">
 
                 <div className="project-image">
-                  <img src={project.image} alt={project.title} />
+                  {project.screenshots?.length > 0 && (
+                    <img
+                      src={getImage(project.screenshots[0])}
+                      alt={project.title}
+                    />
+                  )}
                 </div>
 
                 <div className="project-content">
@@ -58,7 +75,12 @@ export default function Projects() {
       </div>
 
       <div className="projects-bottom">
-        <button className="view-all-btn">Ver todos</button>
+        <button
+          className="view-all-btn"
+          onClick={() => navigate("/proyectos")}
+        >
+          Ver todos
+        </button>
 
         <div className="projects-controls">
           <button onClick={prev}>‹</button>

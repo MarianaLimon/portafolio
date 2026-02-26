@@ -4,7 +4,7 @@
 
 .header {
   width: 100%;
-  box-sizing: border-box; /* ← importante */
+  box-sizing: border-box;
 
   display: flex;
   justify-content: space-between;
@@ -22,7 +22,10 @@
   margin-bottom: 50px;
 }
 
-/* Left */
+/* ===============================
+   LEFT
+================================= */
+
 .header-left {
   display: flex;
   align-items: center;
@@ -53,32 +56,103 @@
   color: #2f2f3a;
 }
 
-/* Navigation */
+/* ===============================
+   NAVIGATION
+================================= */
+
 .nav {
   display: flex;
   align-items: center;
   gap: 36px;
 }
 
-.nav a {
+/* Base link */
+
+.nav-link {
   text-decoration: none;
   font-weight: 500;
   color: #5b5b70;
-  transition: 0.2s ease;
+  transition: 0.25s ease;
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding-bottom: 6px;
 }
 
-.nav a:hover {
+/* Hover (solo leve cambio) */
+
+.nav-link:hover {
+  color: #2f2f3a;
+}
+
+/* Línea animada base */
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+
+  width: 0%;
+  height: 2px;
+
+  background: linear-gradient(135deg, #a98bff, #8f5df6);
+  border-radius: 2px;
+
+  transform: translateX(-50%);
+  transition: width 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Línea visible cuando está activo */
+
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* También animación al hover */
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ===============================
+   PROYECTOS GLOW SUAVE
+================================= */
+
+.projects-link.glowing {
+  animation: subtleGlow 2.8s ease-in-out infinite;
+}
+
+.projects-link.glowing {
   color: #8f5df6;
 }
 
-/* Contact Button */
+@keyframes subtleGlow {
+  0% {
+    text-shadow: 0 0 0px rgba(143, 93, 246, 0);
+  }
+  50% {
+    text-shadow:
+      0 0 6px rgba(143, 93, 246, 0.6),
+      0 0 12px rgba(143, 93, 246, 0.35);
+  }
+  100% {
+    text-shadow: 0 0 0px rgba(143, 93, 246, 0);
+  }
+}
+
+/* ===============================
+   CONTACT BUTTON
+================================= */
+
 .contact-btn {
   display: flex;
   align-items: center;
   gap: 8px;
 
   padding: 10px 22px;
-  border-radius: 10px;
+  border-radius: 12px;
 
   border: 1px solid rgba(255, 255, 255, 0.6);
   background: rgba(255, 255, 255, 0.3);
@@ -88,14 +162,24 @@
   color: #3a3a4a;
 
   cursor: pointer;
-  transition: 0.2s ease;
+  transition: all 0.25s ease;
 }
 
 .contact-btn:hover {
-  background: rgba(255, 255, 255, 0.5);
+  background: linear-gradient(135deg, #a98bff, #8f5df6);
+  color: white;
+  border: none;
+
+  box-shadow:
+    0 10px 25px rgba(143, 93, 246, 0.35);
+
+  transform: translateY(-2px);
 }
 
-/* Hamburger */
+/* ===============================
+   HAMBURGER
+================================= */
+
 .hamburger {
   display: none;
   font-size: 22px;
@@ -103,7 +187,10 @@
   cursor: pointer;
 }
 
-/* Responsive */
+/* ===============================
+   RESPONSIVE
+================================= */
+
 @media (max-width: 768px) {
 
   .nav {
