@@ -1,38 +1,203 @@
 [
   {
-    "slug": "tom",
-    "title": "TOM",
-    "description": "Sitio corporativo desarrollado completamente con CSS puro y maquetación personalizada.",
+    "id": 1,
+    "slug": "tom-website",
+    "title": "TOM Website",
+    "subtitle": "Landing corporativa",
+    "description": "Sitio desarrollado completamente con CSS puro, enfocado en diseño limpio, performance y maquetación pixel-perfect.",
+    "year": "2025",
+    "role": "Frontend Developer",
     "screenshots": [
       "TOM_1.jpg",
-      "PERSONAJES_1.jpg"
+      "TOM_2.jpg",
+      "TOM_3.jpg",
+      "TOM_4.jpg",
+      "TOM_5.jpg"
     ],
-    "tech": ["HTML", "CSS"],
+    "tech": ["HTML", "CSS", "Responsive Design"],
+    "highlights": [
+      "Maquetación desde cero",
+      "Optimización de rendimiento",
+      "Animaciones CSS personalizadas"
+    ],
     "github": "https://github.com/MarianaLimon/TOM-website",
     "demo": "https://tomc.com.mx/"
   },
   {
-    "slug": "personajes",
-    "title": "App Personajes",
-    "description": "Aplicación desarrollada en React con consumo de API y manejo de estado.",
+    "id": 2,
+    "slug": "app-personajes-rick-morty",
+    "title": "App de Personajes",
+    "subtitle": "Explorador interactivo con sistema de favoritos",
+    "description": "Aplicación desarrollada con React que consume la API pública de Rick & Morty. Permite explorar personajes, filtrarlos, agregarlos a favoritos y navegar mediante paginación dinámica. Proyecto enfocado en manejo de estado, consumo de APIs y arquitectura modular.",
+    "year": "2026",
+    "role": "Frontend Developer",
     "screenshots": [
       "PERSONAJES_1.jpg",
-      "TOM_1.jpg"
+      "PERSONAJES_2.jpg",
+      "PERSONAJES_3.jpg"
     ],
-    "tech": ["React", "API", "Hooks"],
-    "github": "",
+    "tech": [
+      "React",
+      "JavaScript (ES6+)",
+      "Fetch API",
+      "CSS3",
+      "Responsive Design"
+    ],
+    "highlights": [
+      "Consumo de API REST externa",
+      "Gestión de estado con useState y useEffect",
+      "Sistema de favoritos persistente",
+      "Paginación dinámica",
+      "Arquitectura por componentes reutilizables"
+    ],
+    "github": "https://github.com/MarianaLimon/testfrontend",
+    "demo": "https://limonyya.com/personajes/"
+  },
+  {
+    "id": 3,
+    "slug": "alvasa-system",
+    "title": "ALVASA System",
+    "subtitle": "Sistema integral de gestión operativa y financiera",
+    "description": "Sistema web desarrollado para la gestión completa de cotizaciones, procesos operativos, asignación de costos y pagos a proveedores. Permite administrar flujos internos, generar PDFs personalizados y mantener trazabilidad entre módulos interconectados.",
+    "year": "2025",
+    "role": "Full Stack Developer",
+    "screenshots": [
+      "ALVASA_1.jpg",
+      "ALVASA_2.jpg",
+      "ALVASA_3.jpg",
+      "ALVASA_4.jpg",
+      "ALVASA_5.jpg",
+      "ALVASA_6.jpg",
+      "ALVASA_7.jpg",
+      "ALVASA_8.jpg",
+      "ALVASA_9.jpg",
+      "ALVASA_10.jpg",
+      "ALVASA_11.jpg"
+    ],
+    "tech": [
+      "React",
+      "Node.js",
+      "Express",
+      "MySQL",
+      "REST API",
+      "Bootstrap",
+      "EJS",
+      "PDF Generation"
+    ],
+    "highlights": [
+      "Arquitectura modular con frontend y backend desacoplados",
+      "CRUD completo para múltiples módulos interconectados",
+      "Generación dinámica de PDFs con formato personalizado",
+      "Gestión de pagos a proveedores con cálculo de saldo en tiempo real",
+      "Sistema de asignación de costos vinculado a procesos operativos",
+      "Integración de múltiples subformularios sincronizados"
+    ],
+    "github": "https://github.com/MarianaLimon/alvasa-system",
     "demo": ""
   },
   {
-    "slug": "alvasa-system",
-    "title": "Alvasa System",
-    "description": "Sistema administrativo con módulos de cotización, procesos operativos y asignación de costos.",
+    "id": 4,
+    "slug": "ge3k-wallet-ecommerce",
+    "title": "GE3K Wallet",
+    "subtitle": "E-commerce de carteras en WordPress",
+    "description": "Tienda online desarrollada en WordPress con WooCommerce para la venta de carteras. Implementación completa de catálogo, carrito de compras, pasarela de pago y optimización de experiencia de usuario enfocada en conversión.",
+    "year": "2025",
+    "role": "Web Developer",
+    "client": "GE3K Wallet",
+    "type": "Proyecto comercial",
     "screenshots": [
-      "ALVASA_1.jpg",
-      "ALVASA_1.jpg"
+      "GE3K_1.jpg",
+      "GE3K_2.jpg",
+      "GE3K_3.jpg",
+      "GE3K_4.jpg"
     ],
-    "tech": ["React", "Node", "MySQL"],
+    "tech": [
+      "WordPress",
+      "WooCommerce",
+      "PHP",
+      "CSS",
+      "Responsive Design",
+      "SEO Básico"
+    ],
+    "highlights": [
+      "Configuración completa de WooCommerce",
+      "Implementación de pasarela de pago",
+      "Optimización para dispositivos móviles",
+      "Configuración de productos variables",
+      "Estructuración SEO básica para productos",
+      "Gestión de hosting y dominio"
+    ],
     "github": "",
-    "demo": ""
-  }
+    "demo": "https://limonyya.com/ge3kwallet/"
+  },
+  {
+  "id": 5,
+  "slug": "invitaciones-digitales",
+  "title": "Invitaciones Digitales",
+  "subtitle": "Sitio para venta de invitaciones interactivas",
+  "description": "Sitio desarrollado en WordPress utilizando una plantilla premium como base, personalizada para la venta de invitaciones digitales interactivas. Se realizaron ajustes de diseño, estructura visual, optimización mobile y configuración de productos digitales.",
+  "year": "2025",
+  "role": "Web Developer",
+  "client": "Proyecto propio",
+  "type": "Proyecto comercial",
+  "screenshots": [
+    "INVITA_1.jpg",
+    "INVITA_2.jpg",
+    "INVITA_3.jpg",
+    "INVITA_4.jpg"
+  ],
+  "tech": [
+    "WordPress",
+    "Plantilla Premium",
+    "Elementor",
+    "CSS Personalizado",
+    "WooCommerce",
+    "Responsive Design"
+  ],
+  "highlights": [
+    "Personalización completa de plantilla base",
+    "Ajustes de estilos con CSS personalizado",
+    "Configuración de productos digitales",
+    "Optimización para dispositivos móviles",
+    "Implementación de flujo de compra",
+    "Gestión de hosting y dominio"
+  ],
+  "github": "",
+  "demo": "https://invitacioneslimon.com/"
+},
+{
+  "id": 6,
+  "slug": "plugin-colegio-arquitectos",
+  "title": "Plugin Colegio de Arquitectos",
+  "subtitle": "Desarrollo de plugin personalizado en WordPress",
+  "description": "Plugin desarrollado a medida para el Colegio de Arquitectos con el objetivo de gestionar funcionalidades internas específicas de la institución. Incluyó desarrollo en PHP, integración con base de datos de WordPress y creación de interfaces administrativas dentro del panel.",
+  "year": "2025",
+  "role": "WordPress Developer",
+  "client": "Colegio de Arquitectos",
+  "type": "Desarrollo a medida",
+  "screenshots": [
+    "ARQUI_1.jpg",
+    "ARQUI_2.jpg",
+    "ARQUI_3.jpg",
+    "ARQUI_4.jpg"
+  ],
+  "tech": [
+    "WordPress",
+    "PHP",
+    "MySQL",
+    "Hooks & Filters",
+    "Admin UI Personalizada",
+    "CSS"
+  ],
+  "highlights": [
+    "Desarrollo de plugin desde cero",
+    "Creación de tablas personalizadas en base de datos",
+    "Uso de hooks y filtros de WordPress",
+    "Interfaz administrativa dentro del dashboard",
+    "Validaciones y lógica personalizada en PHP",
+    "Integración con sistema existente del sitio"
+  ],
+  "github": "https://github.com/MarianaLimon/pluginwp-attendee-registration",
+  "demo": "limonyya.com/ColegiodeArquitectosQtro/"
+}
 ]

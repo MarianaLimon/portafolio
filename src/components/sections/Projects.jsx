@@ -59,8 +59,6 @@ export default function Projects() {
 
                 <div className="project-content">
                   <h4>{project.title}</h4>
-                  <p>{project.description}</p>
-
                   <div className="project-tags">
                     {project.tech.map((t, idx) => (
                       <span key={idx}>{t}</span>
