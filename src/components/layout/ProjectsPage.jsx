@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import SectionTitle from "../ui/SectionTitle";
 import projects from "../../data/projects.json";
 import "../../css/projects-page.css";
@@ -13,8 +14,24 @@ const getImage = (filename) => {
 
 export default function ProjectsPage() {
 
+  const { slug } = useParams();
+  const navigate = useNavigate();
+
   const [activeProject, setActiveProject] = useState(projects[0]);
   const [screenIndex, setScreenIndex] = useState(0);
+
+  /* 🔥 Detecta slug cuando cambia la URL */
+  useEffect(() => {
+    if (slug) {
+      const found = projects.find((p) => p.slug === slug);
+      if (found) {
+        setActiveProject(found);
+        setScreenIndex(0);
+      } else {
+        navigate("/proyectos"); // fallback si slug no existe
+      }
+    }
+  }, [slug, navigate]);
 
   const nextScreen = () => {
     setScreenIndex((prev) =>
@@ -33,6 +50,7 @@ export default function ProjectsPage() {
   const changeProject = (project) => {
     setActiveProject(project);
     setScreenIndex(0);
+    navigate(`/proyectos/${project.slug}`); // 🔥 actualiza URL
   };
 
   return (
@@ -82,7 +100,7 @@ export default function ProjectsPage() {
             <p>{activeProject.description}</p>
 
             <div className="project-meta">
-              {activeProject.year && <span> {activeProject.year}</span>}
+              {activeProject.year && <span>{activeProject.year}</span>}
               {activeProject.role && <span>{activeProject.role}</span>}
               {activeProject.client && <span>{activeProject.client}</span>}
               {activeProject.type && <span>{activeProject.type}</span>}
@@ -104,12 +122,12 @@ export default function ProjectsPage() {
 
             <div className="project-buttons">
               {activeProject.github && (
-                <a href={activeProject.github} target="_blank">
+                <a href={activeProject.github} target="_blank" rel="noreferrer">
                   Repo
                 </a>
               )}
               {activeProject.demo && (
-                <a href={activeProject.demo} target="_blank">
+                <a href={activeProject.demo} target="_blank" rel="noreferrer">
                   Ver sitio
                 </a>
               )}
@@ -130,7 +148,7 @@ export default function ProjectsPage() {
               onClick={() => changeProject(project)}
             >
               <strong>{project.title}</strong>
-              {project.year && <span> {project.year}</span>}
+              {project.year && <span>{project.year}</span>}
             </div>
           ))}
         </div>

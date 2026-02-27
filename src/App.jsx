@@ -18,7 +18,13 @@ function App() {
               </>
             }
           />
+
+          {/* Ruta base */}
           <Route path="/proyectos" element={<ProjectsPage />} />
+
+          {/* Ruta dinámica */}
+          <Route path="/proyectos/:slug" element={<ProjectsPage />} />
+
         </Routes>
       </Layout>
     </BrowserRouter>

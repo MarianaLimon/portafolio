@@ -44,9 +44,15 @@ export default function Projects() {
           className="projects-track"
           style={{ transform: `translateX(-${index * 50}%)` }}
         >
-          {projects.map((project, i) => (
+          {projects.map((project) => (
             <div className="project-slide" key={project.slug}>
-              <div className="project-card">
+              
+              {/* 🔥 CLICK AQUÍ */}
+              <div
+                className="project-card"
+                onClick={() => navigate(`/proyectos/${project.slug}`)}
+                style={{ cursor: "pointer" }}
+              >
 
                 <div className="project-image">
                   {project.screenshots?.length > 0 && (
