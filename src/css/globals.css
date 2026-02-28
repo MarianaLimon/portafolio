@@ -20,3 +20,7 @@ body {
     #d9c9ff 100%
   );
 }
+
+body.menu-open {
+  overflow: hidden;
+}

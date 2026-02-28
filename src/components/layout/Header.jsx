@@ -1,11 +1,24 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import { Mail } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
+
+  /* 🔥 Bloquea scroll + agrega clase cuando menú está abierto */
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.classList.add("menu-open");
+    } else {
+      document.body.classList.remove("menu-open");
+    }
+
+    return () => {
+      document.body.classList.remove("menu-open");
+    };
+  }, [menuOpen]);
 
   const goToSection = (sectionId) => {
     if (location.pathname !== "/") {
@@ -22,60 +35,73 @@ export default function Header() {
     setMenuOpen(false);
   };
 
-  const isProjectsActive = location.pathname === "/proyectos";
-
   return (
-    <header className="header">
-      <div className="header-left">
-        <div className="logo-box">ML</div>
-        <span className="brand-name">MARIANA LIMÓN</span>
-      </div>
+    <>
+      <header className="header">
+        <div className="header-left">
+          <div className="logo-box">ML</div>
+          <span className="brand-name">MARIANA LIMÓN</span>
+        </div>
 
-      <nav className={`nav ${menuOpen ? "open" : ""}`}>
+        <nav className={`nav ${menuOpen ? "open" : ""}`}>
+          <Link
+            to="/"
+            className={
+              location.pathname === "/"
+                ? "nav-link active"
+                : "nav-link"
+            }
+            onClick={() => setMenuOpen(false)}
+          >
+            Home
+          </Link>
 
-        <Link
-          to="/"
-          className={location.pathname === "/" ? "nav-link active" : "nav-link"}
-          onClick={() => setMenuOpen(false)}
+          <Link
+            to="/proyectos"
+            className={`nav-link projects-link glowing ${
+              location.pathname.startsWith("/proyectos")
+                ? "active"
+                : ""
+            }`}
+            onClick={() => setMenuOpen(false)}
+          >
+            Proyectos
+          </Link>
+
+          <button
+            className="nav-link"
+            onClick={() => goToSection("skills")}
+          >
+            Skills
+          </button>
+
+          <a
+            href="https://wa.me/5215512345678"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-btn"
+            onClick={() => setMenuOpen(false)}
+          >
+            <MessageCircle size={16} strokeWidth={2} />
+            WhatsApp
+          </a>
+        </nav>
+
+        <div
+          className={`hamburger ${menuOpen ? "open" : ""}`}
+          onClick={() => setMenuOpen((prev) => !prev)}
         >
-          Home
-        </Link>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </header>
 
-        <Link
-          to="/proyectos"
-          className={`nav-link projects-link glowing ${
-            location.pathname === "/proyectos"
-              ? "active"
-              : ""
-          }`}
-        >
-          Proyectos
-        </Link>
-
-        <Link
-          to="/"
-          className="nav-link"
-          onClick={() => goToSection("skills")}
-        >
-          Skills
-        </Link>
-
-        <button
-          className="contact-btn"
-          onClick={() => goToSection("contacto")}
-        >
-          <Mail size={16} strokeWidth={2} />
-          Contacto
-        </button>
-
-      </nav>
-
+      {/* Overlay opcional */}
       <div
-        className="hamburger"
-        onClick={() => setMenuOpen(!menuOpen)}
-      >
-        ☰
-      </div>
-    </header>
+        className={`menu-overlay ${menuOpen ? "active" : ""}`}
+        onClick={() => setMenuOpen(false)}
+      />
+    </>
   );
 }
