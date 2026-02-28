@@ -1,5 +1,7 @@
 import "../../css/hero.css";
 import profileImg from "../../assets/images/foto.jpg";
+import cvFile from "../../assets/CV-MarianaLimon2025.pdf";
+import { Download, Eye } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -20,10 +22,26 @@ export default function Hero() {
           </h1>
 
           <div className="hero-tags">
-            <span className="tag active">Desarrollo Web</span>
-            <span className="tag">E-commerce</span>
-            <span className="tag">Optimización</span>
-            <span className="tag">Mailing</span>
+
+            <a
+              href={cvFile}
+              download
+              className="tag active"
+            >
+              <Download size={16} />
+              Descargar CV
+            </a>
+
+            <a
+              href={cvFile}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="tag"
+            >
+              <Eye size={16} />
+              Ver CV
+            </a>
+
           </div>
 
           <div className="hero-divider"></div>

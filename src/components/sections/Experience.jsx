@@ -3,6 +3,7 @@ import SectionCard from "../ui/SectionCard";
 import SectionTitle from "../ui/SectionTitle";
 import "../../css/experience-section.css";
 import jobs from "../../data/experience.json";
+import { CheckCircle } from "lucide-react";
 
 export default function Experience() {
 
@@ -26,7 +27,7 @@ export default function Experience() {
 
               <div className="experience-top">
                 <div>
-                  <h3>{job.company}</h3>
+                  <h3 className="experience-title">{job.company}</h3>
                   <p className="role">{job.role}</p>
                 </div>
 
@@ -37,7 +38,10 @@ export default function Experience() {
 
               <ul className="experience-list">
                 {job.tasks.map((task, idx) => (
-                  <li key={idx}>{task}</li>
+                  <li key={idx}>
+                    <CheckCircle size={16} className="task-icon" />
+                    {task}
+                  </li>
                 ))}
               </ul>
 
