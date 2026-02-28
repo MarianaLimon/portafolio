@@ -1,0 +1,48 @@
+[
+  {
+    "slug": "central-media",
+    "year": "2019 - 2025",
+    "company": "Central Media",
+    "location": "CDMX",
+    "role": "Front End Developer",
+    "tasks": [
+      "Desarrollo y gestión de sitios web",
+      "Creación de templates y plugins",
+      "Maquetado de mailing especializado",
+      "Optimización SEO",
+      "Interpretación de data analytics",
+      "Creación de ayudas visuales para e-learning"
+    ],
+    "tech": ["HTML", "CSS", "JavaScript"]
+  },
+  {
+    "slug": "mdm-marketing",
+    "year": "2017",
+    "company": "MDM Marketing",
+    "location": "CDMX",
+    "role": "Web Developer",
+    "tasks": [
+      "Desarrollo y gestión de sitios web",
+      "Desarrollo y gestión de ecommerce",
+      "Administración de VPS",
+      "Asignación y adquisición de dominios y hosting",
+      "Gestión de cuentas de correo"
+    ],
+    "tech": ["WordPress", "PHP", "Hosting"]
+  },
+  {
+    "slug": "implantate-en-la-web",
+    "year": "2016",
+    "company": "Implántate en la Web",
+    "location": "CDMX",
+    "role": "Web Developer",
+    "tasks": [
+      "Levantamiento de requerimientos",
+      "Planificación de proyectos",
+      "Administración de servidores",
+      "Migración de sitios",
+      "Gestión de dominios y hosting"
+    ],
+    "tech": ["WordPress", "Servers", "Domains"]
+  }
+]

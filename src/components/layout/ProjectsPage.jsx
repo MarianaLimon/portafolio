@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import { CheckCircle, Github, Globe } from "lucide-react";
 import SectionTitle from "../ui/SectionTitle";
+import SectionCard from "../ui/SectionCard";
 import projects from "../../data/projects.json";
 import "../../css/projects-page.css";
 
@@ -13,14 +15,12 @@ const getImage = (filename) => {
 };
 
 export default function ProjectsPage() {
-
   const { slug } = useParams();
   const navigate = useNavigate();
 
   const [activeProject, setActiveProject] = useState(projects[0]);
   const [screenIndex, setScreenIndex] = useState(0);
 
-  /* 🔥 Detecta slug cuando cambia la URL */
   useEffect(() => {
     if (slug) {
       const found = projects.find((p) => p.slug === slug);
@@ -28,7 +28,7 @@ export default function ProjectsPage() {
         setActiveProject(found);
         setScreenIndex(0);
       } else {
-        navigate("/proyectos"); // fallback si slug no existe
+        navigate("/proyectos");
       }
     }
   }, [slug, navigate]);
@@ -50,16 +50,35 @@ export default function ProjectsPage() {
   const changeProject = (project) => {
     setActiveProject(project);
     setScreenIndex(0);
-    navigate(`/proyectos/${project.slug}`); // 🔥 actualiza URL
+    navigate(`/proyectos/${project.slug}`);
   };
 
   return (
     <div className="projects-page">
       <SectionTitle>Proyectos</SectionTitle>
 
+      <div className="projects-mobile-selector">
+        <div className="select-wrapper">
+          <select
+            value={activeProject.slug}
+            onChange={(e) => {
+              const selected = projects.find(
+                (p) => p.slug === e.target.value
+              );
+              changeProject(selected);
+            }}
+          >
+            {projects.map((project) => (
+              <option key={project.slug} value={project.slug}>
+                {project.title}
+              </option>
+            ))}
+          </select>
+        </div>
+      </div>
+
       <div className="projects-layout">
 
-        {/* MAIN */}
         <div className="project-main">
 
           <div className="laptop-wrapper">
@@ -86,58 +105,63 @@ export default function ProjectsPage() {
             <div className="laptop-base"></div>
           </div>
 
-          {/* INFO */}
-          <div className="project-info">
+          <SectionCard>
+            <div className="project-info">
 
-            <h2>{activeProject.title}</h2>
+              <h2>{activeProject.title}</h2>
 
-            {activeProject.subtitle && (
-              <p className="project-subtitle">
-                {activeProject.subtitle}
-              </p>
-            )}
+              {activeProject.subtitle && (
+                <p className="project-subtitle">
+                  {activeProject.subtitle}
+                </p>
+              )}
 
-            <p>{activeProject.description}</p>
+              <p>{activeProject.description}</p>
 
-            <div className="project-meta">
-              {activeProject.year && <span>{activeProject.year}</span>}
-              {activeProject.role && <span>{activeProject.role}</span>}
-              {activeProject.client && <span>{activeProject.client}</span>}
-              {activeProject.type && <span>{activeProject.type}</span>}
-            </div>
+              <div className="project-meta">
+                {activeProject.year && <span>{activeProject.year}</span>}
+                {activeProject.role && <span>{activeProject.role}</span>}
+                {activeProject.client && <span>{activeProject.client}</span>}
+                {activeProject.type && <span>{activeProject.type}</span>}
+              </div>
 
-            {activeProject.highlights && (
-              <ul className="project-highlights">
-                {activeProject.highlights.map((item, i) => (
-                  <li key={i}>{item}</li>
+              {activeProject.highlights && (
+                <ul className="project-highlights">
+                  {activeProject.highlights.map((item, i) => (
+                    <li key={i}>
+                      <CheckCircle size={16} className="highlight-icon" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              )}
+
+              <div className="tech-tags">
+                {activeProject.tech.map((tech, i) => (
+                  <span key={i}>{tech}</span>
                 ))}
-              </ul>
-            )}
+              </div>
 
-            <div className="tech-tags">
-              {activeProject.tech.map((tech, i) => (
-                <span key={i}>{tech}</span>
-              ))}
+              <div className="project-buttons">
+                {activeProject.github && (
+                  <a href={activeProject.github} target="_blank" rel="noreferrer">
+                    <Github size={16} />
+                    Repo
+                  </a>
+                )}
+                {activeProject.demo && (
+                  <a href={activeProject.demo} target="_blank" rel="noreferrer">
+                    <Globe size={16} />
+                    Ver sitio
+                  </a>
+                )}
+              </div>
+
             </div>
-
-            <div className="project-buttons">
-              {activeProject.github && (
-                <a href={activeProject.github} target="_blank" rel="noreferrer">
-                  Repo
-                </a>
-              )}
-              {activeProject.demo && (
-                <a href={activeProject.demo} target="_blank" rel="noreferrer">
-                  Ver sitio
-                </a>
-              )}
-            </div>
-
-          </div>
+          </SectionCard>
 
         </div>
 
-        {/* SIDEBAR */}
         <div className="projects-sidebar">
           {projects.map((project) => (
             <div

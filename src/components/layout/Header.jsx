@@ -40,7 +40,7 @@ export default function Header() {
       <header className="header">
         <div className="header-left">
           <div className="logo-box">ML</div>
-          <span className="brand-name">MARIANA LIMÓN</span>
+          <span className="brand-name">MARIANA LIMON</span>
         </div>
 
         <nav className={`nav ${menuOpen ? "open" : ""}`}>

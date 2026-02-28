@@ -1,19 +1,19 @@
 [
   {
     "slug": "central-media",
-    "year": "2019 - Actual",
+    "year": "2019 - 2025",
     "company": "Central Media",
     "location": "CDMX",
     "role": "Front End Developer",
     "tasks": [
-      "Desarrollo y gestión de sitios web",
-      "Creación de templates y plugins",
-      "Maquetado de mailing especializado",
-      "Optimización SEO",
-      "Interpretación de data analytics",
-      "Creación de ayudas visuales para e-learning"
+      "Desarrollo y mantenimiento de sitios web corporativos y e-commerce",
+      "Creación de templates personalizados y desarrollo de plugins a medida",
+      "Maquetación avanzada de campañas de email marketing",
+      "Optimización técnica SEO y mejora de rendimiento web",
+      "Análisis e interpretación de métricas con herramientas de analytics",
+      "Diseño y producción de recursos visuales para plataformas e-learning"
     ],
-    "tech": ["HTML", "CSS", "JavaScript"]
+    "tech": ["HTML", "CSS", "JavaScript", "WordPress", "SEO"]
   },
   {
     "slug": "mdm-marketing",
@@ -22,14 +22,15 @@
     "location": "CDMX",
     "role": "Web Developer",
     "tasks": [
-      "Desarrollo y gestión de sitios web",
-      "Desarrollo y gestión de ecommerce",
-      "Administración de VPS",
-      "Asignación y adquisición de dominios y hosting",
-      "Gestión de cuentas de correo"
+        "Desarrollo y administración de sitios web y tiendas en línea",
+        "Creación de experiencias interactivas y juegos promocionales para activaciones de marca",
+        "Desarrollo de dinámicas digitales vinculadas a campañas impresas y tickets promocionales",
+        "Configuración y gestión de servidores VPS",
+        "Gestión técnica de dominios, hosting y correos corporativos",
+        "Implementación y mantenimiento de entornos WordPress"
     ],
-    "tech": ["WordPress", "PHP", "Hosting"]
-  },
+    "tech": ["WordPress", "PHP", "JavaScript", "VPS", "Hosting"]
+    },
   {
     "slug": "implantate-en-la-web",
     "year": "2016",
@@ -37,12 +38,11 @@
     "location": "CDMX",
     "role": "Web Developer",
     "tasks": [
-      "Levantamiento de requerimientos",
-      "Planificación de proyectos",
-      "Administración de servidores",
-      "Migración de sitios",
-      "Gestión de dominios y hosting"
+      "Levantamiento de requerimientos y planificación de proyectos web",
+      "Administración y configuración de servidores",
+      "Migración y puesta en producción de sitios web",
+      "Gestión técnica de dominios y servicios de hosting"
     ],
-    "tech": ["WordPress", "Servers", "Domains"]
+    "tech": ["WordPress", "Servers", "Domains", "Hosting"]
   }
 ]
