@@ -101,7 +101,7 @@
 .project-tags span {
   padding: 5px 12px;
   border-radius: 10px;
-  font-size: 8px;
+  font-size: 11px;
 
   background: rgba(143, 93, 246, 0.1);
   color: #8f5df6;
@@ -182,4 +182,7 @@
     padding-right: 0;
   }
 
+  .project-tags span {
+    font-size: 8px;
+  }
 }
