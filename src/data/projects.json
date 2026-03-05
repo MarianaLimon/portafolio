@@ -8,7 +8,6 @@
     "year": "2025",
     "role": "Frontend Developer",
     "screenshots": [
-      "TOM_1.jpg",
       "TOM_2.jpg",
       "TOM_3.jpg",
       "TOM_4.jpg",
@@ -103,8 +102,6 @@
     "description": "Tienda online desarrollada en WordPress con WooCommerce para la venta de carteras. Implementación completa de catálogo, carrito de compras, pasarela de pago y optimización de experiencia de usuario enfocada en conversión.",
     "year": "2025",
     "role": "Web Developer",
-    "client": "GE3K Wallet",
-    "type": "Proyecto comercial",
     "screenshots": [
       "GE3K_1.jpg",
       "GE3K_2.jpg",
@@ -113,11 +110,11 @@
     ],
     "tech": [
       "WordPress",
+      "Plantilla Premium",
+      "Elementor",
+      "CSS Personalizado",
       "WooCommerce",
-      "PHP",
-      "CSS",
-      "Responsive Design",
-      "SEO Básico"
+      "Responsive Design"
     ],
     "highlights": [
       "Configuración completa de WooCommerce",
@@ -198,6 +195,6 @@
     "Integración con sistema existente del sitio"
   ],
   "github": "https://github.com/MarianaLimon/pluginwp-attendee-registration",
-  "demo": "limonyya.com/ColegiodeArquitectosQtro/"
+  "demo": "https://limonyya.com/ColegiodeArquitectosQtro/"
 }
 ]

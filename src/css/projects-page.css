@@ -220,6 +220,23 @@
     0 14px 35px rgba(143, 93, 246, 0.45);
 }
 
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.tech-tags span {
+  padding: 6px 12px;
+  border-radius: 12px;
+  background: rgba(143, 93, 246, 0.08);
+  border: 1px solid rgba(143, 93, 246, 0.2);
+  color: #8f5df6;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
 /* =========================
    Responsive
 ========================= */

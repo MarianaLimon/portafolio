@@ -6,7 +6,7 @@ import ProjectsPage from "./components/layout/ProjectsPage";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/marianalimon">
       <Layout>
         <Routes>
           <Route
@@ -19,10 +19,7 @@ function App() {
             }
           />
 
-          {/* Ruta base */}
           <Route path="/proyectos" element={<ProjectsPage />} />
-
-          {/* Ruta dinámica */}
           <Route path="/proyectos/:slug" element={<ProjectsPage />} />
 
         </Routes>
