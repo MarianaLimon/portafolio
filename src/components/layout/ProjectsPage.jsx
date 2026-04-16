@@ -119,9 +119,9 @@ export default function ProjectsPage() {
               <p>{activeProject.description}</p>
 
               <div className="project-meta">
-                {activeProject.year && <span>{activeProject.year}</span>}
-                {activeProject.role && <span>{activeProject.role}</span>}
-                {activeProject.client && <span>{activeProject.client}</span>}
+                {activeProject.year && <span>{activeProject.year}</span>}&nbsp;
+                {activeProject.role && <span>{activeProject.role}</span>}&nbsp;
+                {activeProject.client && <span>{activeProject.client}</span>}&nbsp;
                 {activeProject.type && <span>{activeProject.type}</span>}
               </div>
 
@@ -171,8 +171,7 @@ export default function ProjectsPage() {
               }`}
               onClick={() => changeProject(project)}
             >
-              <strong>{project.title}</strong>
-              {project.year && <span>{project.year}</span>}
+              <strong>{project.title}</strong> &nbsp;
             </div>
           ))}
         </div>

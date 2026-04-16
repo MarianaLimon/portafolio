@@ -1,9 +1,13 @@
+/* =========================
+PROJECTS PAGE
+========================= */
+
 .projects-page {
   margin-top: 80px;
 }
 
 /* =========================
-   Layout
+Layout
 ========================= */
 
 .projects-layout {
@@ -20,7 +24,7 @@
 }
 
 /* =========================
-   Mobile Selector
+Mobile Selector
 ========================= */
 
 .projects-mobile-selector {
@@ -34,19 +38,19 @@
   border-radius: 14px;
   border: none;
 
-  background: linear-gradient(135deg, #a98bff, #8f5df6);
+  background: linear-gradient(135deg, #8b5cf6, #6366f1);
   color: white;
   font-size: 16px;
   font-weight: 500;
 
   cursor: pointer;
-  box-shadow: 0 10px 25px rgba(143, 93, 246, 0.35);
+  box-shadow: 0 10px 25px rgba(139, 92, 246, 0.3);
 
   appearance: none;
 }
 
 /* =========================
-   Laptop Mockup
+Laptop Mockup
 ========================= */
 
 .laptop-wrapper {
@@ -58,13 +62,14 @@
 .laptop-body {
   width: 94%;
   max-width: 720px;
-  background: #1a1a1a;
+  background: #0f0f14; /* 🔥 dark */
   border-radius: 20px;
   padding: 16px;
 
   box-shadow:
-    0 30px 80px rgba(0, 0, 0, 0.35),
-    0 10px 40px rgba(0, 0, 0, 0.2);
+    0 30px 80px rgba(0, 0, 0, 0.6),
+    0 0 60px rgba(139, 92, 246, 0.12);
+    border: 3px solid rgba(255, 255, 255, 0.06);
 }
 
 .laptop-screen-container {
@@ -83,7 +88,7 @@
 }
 
 /* =========================
-   Screen Controls
+Screen Controls
 ========================= */
 
 .screen-controls {
@@ -100,8 +105,10 @@
   border-radius: 14px;
   border: none;
 
-  background: linear-gradient(135deg, #a98bff, #8f5df6);
-  color: white;
+  background: linear-gradient(135deg, #8b5cf6, #6366f1);
+  backdrop-filter: blur(10px);
+
+  color: #fff;
   font-size: 18px;
   cursor: pointer;
 
@@ -109,43 +116,66 @@
   align-items: center;
   justify-content: center;
 
-  box-shadow: 0 10px 25px rgba(143, 93, 246, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  transition: all 0.25s ease;
+}
+
+.screen-controls button:hover {
+  background: rgb(165, 126, 253);
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+  transform: translateY(-2px);
 }
 
 .laptop-base {
   width: 100%;
   height: 18px;
-  background: linear-gradient(to bottom, #e4e4e4, #bfbfbf);
+  background: linear-gradient(to bottom, #999, #1a1a1a);
   border-radius: 0 0 24px 24px;
   margin-top: -4px;
 }
 
 /* =========================
-   Sidebar
+Sidebar
 ========================= */
 
 .projects-sidebar {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
 }
 
 .sidebar-item {
   padding: 16px 20px;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.35);
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  color: #a1a1aa;
   cursor: pointer;
-  transition: 0.25s ease;
+
+  transition: all 0.25s ease;
+}
+
+.sidebar-item:hover {
+  border-color: rgba(139, 92, 246, 0.3);
+  color: #ffffff;
+  transform: translateX(4px);
 }
 
 .sidebar-item.active {
-  background: linear-gradient(135deg, #a98bff, #8f5df6);
-  color: white;
+  background: rgba(139, 92, 246, 0.15);
+  border-color: rgba(139, 92, 246, 0.5);
+  color: #ffffff;
+
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.2);
 }
 
 /* =========================
-   Dropdown Arrow
+Dropdown Arrow
 ========================= */
 
 .select-wrapper {
@@ -164,7 +194,7 @@
 }
 
 /* =========================
-   Highlights icon
+Highlights
 ========================= */
 
 .project-highlights {
@@ -181,13 +211,18 @@
   align-items: flex-start;
   gap: 10px;
   line-height: 1.6;
+  color: #a1a1aa;
 }
 
 .highlight-icon {
-  color: #8f5df6;
+  color: #8b5cf6;
   flex-shrink: 0;
   margin-top: 3px;
 }
+
+/* =========================
+Buttons
+========================= */
 
 .project-buttons {
   display: flex;
@@ -203,22 +238,24 @@
   padding: 12px 24px;
   border-radius: 14px;
 
-  background: linear-gradient(135deg, #a98bff, #8f5df6);
+  background: linear-gradient(135deg, #8b5cf6, #6366f1);
   color: white;
   text-decoration: none;
 
   font-weight: 500;
   transition: all 0.25s ease;
 
-  box-shadow:
-    0 10px 25px rgba(143, 93, 246, 0.35);
+  box-shadow: 0 10px 25px rgba(139, 92, 246, 0.3);
 }
 
 .project-buttons a:hover {
   transform: translateY(-2px);
-  box-shadow:
-    0 14px 35px rgba(143, 93, 246, 0.45);
+  box-shadow: 0 14px 35px rgba(139, 92, 246, 0.45);
 }
+
+/* =========================
+Tech Tags
+========================= */
 
 .tech-tags {
   display: flex;
@@ -230,15 +267,35 @@
 .tech-tags span {
   padding: 6px 12px;
   border-radius: 12px;
-  background: rgba(143, 93, 246, 0.08);
-  border: 1px solid rgba(143, 93, 246, 0.2);
-  color: #8f5df6;
+
+  background: rgba(139, 92, 246, 0.1);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+
+  color: #a78bfa;
   font-size: 13px;
-  white-space: nowrap;
 }
 
 /* =========================
-   Responsive
+ANIMACIÓN
+========================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-main {
+  animation: fadeUp 0.6s ease forwards;
+}
+
+/* =========================
+Responsive
 ========================= */
 
 @media (max-width: 1000px) {

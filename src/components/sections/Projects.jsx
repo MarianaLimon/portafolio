@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import SectionCard from "../ui/SectionCard";
 import SectionTitle from "../ui/SectionTitle";
@@ -20,19 +20,24 @@ export default function Projects() {
   const navigate = useNavigate();
   const [index, setIndex] = useState(0);
 
-  const maxIndex = projects.length - 2;
+  const maxIndex = projects.length - 1;
 
   const next = () => {
-    if (index < maxIndex) {
-      setIndex(index + 1);
-    }
+    setIndex((prev) => (prev < maxIndex ? prev + 1 : 0));
   };
 
   const prev = () => {
-    if (index > 0) {
-      setIndex(index - 1);
-    }
+    setIndex((prev) => (prev > 0 ? prev - 1 : maxIndex));
   };
+
+  /* AUTOPLAY CORRECTO */
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev < maxIndex ? prev + 1 : 0));
+    }, 4500);
+
+    return () => clearInterval(interval);
+  }, [maxIndex]);
 
   return (
     <SectionCard>
@@ -42,12 +47,11 @@ export default function Projects() {
       <div className="projects-slider">
         <div
           className="projects-track"
-          style={{ transform: `translateX(-${index * 50}%)` }}
+          style={{ transform: `translateX(-${index * 100}%)` }}
         >
           {projects.map((project) => (
             <div className="project-slide" key={project.slug}>
-              
-              {/* 🔥 CLICK AQUÍ */}
+
               <div
                 className="project-card"
                 onClick={() => navigate(`/proyectos/${project.slug}`)}
@@ -65,6 +69,7 @@ export default function Projects() {
 
                 <div className="project-content">
                   <h4>{project.title}</h4>
+
                   <div className="project-tags">
                     {project.tech.map((t, idx) => (
                       <span key={idx}>{t}</span>
@@ -87,8 +92,21 @@ export default function Projects() {
         </button>
 
         <div className="projects-controls">
+
           <button onClick={prev}>‹</button>
+
+          <div className="projects-dots">
+            {projects.map((_, i) => (
+              <span
+                key={i}
+                className={`dot ${i === index ? "active" : ""}`}
+                onClick={() => setIndex(i)}
+              />
+            ))}
+          </div>
+
           <button onClick={next}>›</button>
+
         </div>
       </div>
 

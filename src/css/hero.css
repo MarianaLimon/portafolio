@@ -1,161 +1,275 @@
 /* ===============================
-   HERO SECTION
+HERO SECTION
 ================================= */
 
 .hero {
-  width: 100%;
+width: 100%;
 }
 
 .hero-card {
-  background: #ede7f9; 
-  border: 1px solid rgba(160, 130, 220, 0.15);
-  border-radius: 20px;
-  padding: 32px 48px;
-  
-  box-shadow: 
-    0 15px 40px rgba(120, 90, 200, 0.08);
+background: rgba(255, 255, 255, 0.04);
+backdrop-filter: blur(16px);
 
-  display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 34px;
-  align-items: center;
+border: 1px solid rgba(255, 255, 255, 0.08);
+border-radius: 20px;
+padding: 32px 48px;
+
+box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+
+display: grid;
+grid-template-columns: 200px 1fr 220px; /* 🔥 3 columnas */
+gap: 40px;
+align-items: center;
 }
 
 /* ===============================
-   IMAGE
+IMAGE
 ================================= */
 
 .hero-image {
-  width: 100%;
-  max-width: 200px;
-  aspect-ratio: 3 / 4;
+width: 100%;
+max-width: 200px;
+aspect-ratio: 3 / 4;
 }
 
 .hero-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border: solid 5px #a98bff;
-  border-radius: 28px;
+width: 100%;
+height: 100%;
+object-fit: cover;
 
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+border: 2px solid rgba(139, 92, 246, 0.5);
+border-radius: 28px;
+
+box-shadow: 0 15px 40px rgba(139, 92, 246, 0.2);
 }
 
 /* ===============================
-   CONTENT
+CONTENT
 ================================= */
 
 .hero-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 30px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+max-width: 520px;
 }
 
 .hero-title {
-  font-size: 18px;
-  line-height: 1.6;
-  font-weight: 400;
-  color: #2d2d38;
+font-size: 18px;
+line-height: 1.6;
+font-weight: 400;
+color: #e4e4e7;
 
-  word-break: keep-all;
-  margin-top: 4rem;
+word-break: keep-all;
+margin: 0;
+
+text-align: justify;
 }
 
 .hero-title span {
-  font-weight: 600;
+font-weight: 600;
 }
 
 /* ===============================
-   TAGS (AHORA BOTONES FUNCIONALES)
+ACTIONS
+================================= */
+
+.hero-actions {
+display: flex;
+flex-direction: column;
+gap: 14px;
+align-items: center;
+}
+
+/* ===============================
+TAGS (BOTONES)
 ================================= */
 
 .hero-tags {
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-  justify-content: flex-start; 
+display: flex;
+flex-direction: column; /* 🔥 vertical ahora */
+gap: 12px;
 }
 
 .tag {
-  display: inline-flex; 
-  align-items: center;
-  gap: 8px;
+display: inline-flex;
+align-items: center;
+gap: 8px;
 
-  padding: 12px 22px;
-  border-radius: 14px;
+padding: 12px 22px;
+border-radius: 14px;
 
-  background: #eceaf3;
-  border: 1px solid rgba(120, 90, 200, 0.15);
+background: rgba(255, 255, 255, 0.05);
+backdrop-filter: blur(10px);
 
-  color: #55556a;
-  text-decoration: none; /* 🔥 porque ahora es <a> */
+border: 1px solid rgba(255, 255, 255, 0.08);
 
-  box-shadow: 
-    0 6px 18px rgba(143, 93, 246, 0.08);
+color: #a1a1aa;
+text-decoration: none;
 
-  transition: 0.2s ease;
+transition: all 0.25s ease;
 }
 
 .tag:hover {
-  box-shadow: 
-    0 8px 22px rgba(143, 93, 246, 0.18);
+color: #ffffff;
+border-color: rgba(139, 92, 246, 0.4);
+
+box-shadow: 0 0 20px rgba(139, 92, 246, 0.2);
 }
 
 .tag.active {
-  background: linear-gradient(135deg, #a98bff, #8f5df6);
-  color: white;
-  border: none;
+color: #ffffff;
+border-color: rgba(139, 92, 246, 0.6);
 
-  box-shadow: 
-    0 10px 25px rgba(143, 93, 246, 0.35);
+box-shadow: 0 0 25px rgba(139, 92, 246, 0.35);
 }
 
 /* ===============================
-   DIVIDER
+SOCIALS
+================================= */
+
+.hero-socials {
+display: flex;
+gap: 10px;
+margin-top: 10px;
+}
+
+.social-btn {
+width: 3rem;
+height: 3rem;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+border-radius: 10px;
+
+background: rgba(255, 255, 255, 0.05);
+backdrop-filter: blur(10px);
+
+border: 1px solid rgba(255, 255, 255, 0.08);
+
+color: #a1a1aa;
+
+transition: all 0.25s ease;
+}
+
+.social-btn:hover {
+color: #ffffff;
+
+border-color: rgba(139, 92, 246, 0.5);
+
+box-shadow: 0 0 18px rgba(139, 92, 246, 0.25);
+
+transform: translateY(-2px);
+}
+
+/* ===============================
+DIVIDER
 ================================= */
 
 .hero-divider {
-  margin-top: 32px;
-  height: 1px;
-  background: rgba(120, 90, 200, 0.15);
-  width: 100%;
+grid-column: 1 / -1; /* 🔥 ocupa toda la fila */
+margin-top: 0px;
+height: 1px;
+background: rgba(255, 255, 255, 0.08);
+width: 100%;
 }
 
 /* ===============================
-   RESPONSIVE
+RESPONSIVE
 ================================= */
 
 @media (max-width: 900px) {
 
-  .hero-card {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .hero-image {
-    margin: 0 auto;
-    max-width: 160px;
-  }
-
-  .hero-content {
-    align-items: center;
-  }
-
-  .hero-title {
-    font-size: 15px;
-    margin-top: 0;
-  }
-
-  .hero-tags {
-    justify-content: center; /* 🔥 centrado en mobile */
-  }
-
-  .hero-divider {
-    margin-top: 0;
-  }
-
-  .section-card {
-    padding: 26px 20px !important;
-  }
+.hero-card {
+grid-template-columns: 1fr;
+text-align: center;
 }
+
+.hero-image {
+margin: 0 auto;
+max-width: 160px;
+}
+
+.hero-content {
+align-items: center;
+}
+
+.hero-actions {
+align-items: center;
+}
+
+.hero-tags {
+align-items: center;
+}
+
+.hero-divider {
+margin-top: 20px;
+}
+
+.section-card {
+padding: 26px 20px !important;
+}
+}
+
+
+/* ===============================
+ANIMATIONS
+================================= */
+
+/* Entrada general */
+@keyframes fadeUp {
+from {
+opacity: 0;
+transform: translateY(20px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+/* Hero container */
+.hero-card {
+animation: fadeUp 0.8s ease forwards;
+opacity: 0;
+}
+
+/* Stagger (entrada escalonada) */
+.hero-image {
+animation: fadeUp 0.8s ease forwards;
+animation-delay: 0.1s;
+opacity: 0;
+}
+
+.hero-content {
+animation: fadeUp 0.8s ease forwards;
+animation-delay: 0.2s;
+opacity: 0;
+}
+
+.hero-actions {
+animation: fadeUp 0.8s ease forwards;
+animation-delay: 0.3s;
+opacity: 0;
+}
+
+/* Botones más vivos */
+.tag {
+transition: all 0.25s ease;
+}
+
+.tag:hover {
+transform: translateY(-3px);
+}
+
+/* Sociales con más presencia */
+.social-btn {
+transition: all 0.25s ease;
+}
+
+.social-btn:hover {
+transform: translateY(-3px) scale(1.05);
+}
+

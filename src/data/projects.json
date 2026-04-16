@@ -1,59 +1,6 @@
 [
   {
     "id": 1,
-    "slug": "tom-website",
-    "title": "TOM Website",
-    "subtitle": "Landing corporativa",
-    "description": "Sitio desarrollado completamente con CSS puro, enfocado en diseño limpio, performance y maquetación pixel-perfect.",
-    "year": "2025",
-    "role": "Frontend Developer",
-    "screenshots": [
-      "TOM_2.jpg",
-      "TOM_3.jpg",
-      "TOM_4.jpg",
-      "TOM_5.jpg"
-    ],
-    "tech": ["HTML", "CSS", "Responsive Design"],
-    "highlights": [
-      "Maquetación desde cero",
-      "Optimización de rendimiento",
-      "Animaciones CSS personalizadas"
-    ],
-    "github": "https://github.com/MarianaLimon/TOM-website",
-    "demo": "https://tomc.com.mx/"
-  },
-  {
-    "id": 2,
-    "slug": "app-personajes-rick-morty",
-    "title": "App de Personajes",
-    "subtitle": "Explorador interactivo con sistema de favoritos",
-    "description": "Aplicación desarrollada con React que consume la API pública de Rick & Morty. Permite explorar personajes, filtrarlos, agregarlos a favoritos y navegar mediante paginación dinámica. Proyecto enfocado en manejo de estado, consumo de APIs y arquitectura modular.",
-    "year": "2026",
-    "role": "Frontend Developer",
-    "screenshots": [
-      "PERSONAJES_1.jpg",
-      "PERSONAJES_2.jpg",
-      "PERSONAJES_3.jpg"
-    ],
-    "tech": [
-      "React",
-      "JavaScript (ES6+)",
-      "Fetch API",
-      "CSS3",
-      "Responsive Design"
-    ],
-    "highlights": [
-      "Consumo de API REST externa",
-      "Gestión de estado con useState y useEffect",
-      "Sistema de favoritos persistente",
-      "Paginación dinámica",
-      "Arquitectura por componentes reutilizables"
-    ],
-    "github": "https://github.com/MarianaLimon/testfrontend",
-    "demo": "https://limonyya.com/personajes/"
-  },
-  {
-    "id": 3,
     "slug": "alvasa-system",
     "title": "ALVASA System",
     "subtitle": "Sistema integral de gestión operativa y financiera",
@@ -94,6 +41,60 @@
     "github": "https://github.com/MarianaLimon/alvasa-system",
     "demo": ""
   },
+  {
+    "id": 2,
+    "slug": "tom-website",
+    "title": "TOM Website",
+    "subtitle": "Landing corporativa",
+    "description": "Sitio desarrollado completamente con CSS puro, enfocado en diseño limpio, performance y maquetación pixel-perfect.",
+    "year": "2025",
+    "role": "Frontend Developer",
+    "screenshots": [
+      "TOM_2.jpg",
+      "TOM_3.jpg",
+      "TOM_4.jpg",
+      "TOM_5.jpg"
+    ],
+    "tech": ["HTML", "CSS", "Responsive Design"],
+    "highlights": [
+      "Maquetación desde cero",
+      "Optimización de rendimiento",
+      "Animaciones CSS personalizadas"
+    ],
+    "github": "https://github.com/MarianaLimon/TOM-website",
+    "demo": "https://tomc.com.mx/"
+  },
+  {
+    "id": 3,
+    "slug": "app-personajes-rick-morty",
+    "title": "App de Personajes",
+    "subtitle": "Explorador interactivo con sistema de favoritos",
+    "description": "Aplicación desarrollada con React que consume la API pública de Rick & Morty. Permite explorar personajes, filtrarlos, agregarlos a favoritos y navegar mediante paginación dinámica. Proyecto enfocado en manejo de estado, consumo de APIs y arquitectura modular.",
+    "year": "2026",
+    "role": "Frontend Developer",
+    "screenshots": [
+      "PERSONAJES_1.jpg",
+      "PERSONAJES_2.jpg",
+      "PERSONAJES_3.jpg"
+    ],
+    "tech": [
+      "React",
+      "JavaScript (ES6+)",
+      "Fetch API",
+      "CSS3",
+      "Responsive Design"
+    ],
+    "highlights": [
+      "Consumo de API REST externa",
+      "Gestión de estado con useState y useEffect",
+      "Sistema de favoritos persistente",
+      "Paginación dinámica",
+      "Arquitectura por componentes reutilizables"
+    ],
+    "github": "https://github.com/MarianaLimon/testfrontend",
+    "demo": "https://limonyya.com/personajes/"
+  },
+  
   {
     "id": 4,
     "slug": "ge3k-wallet-ecommerce",
@@ -196,5 +197,77 @@
   ],
   "github": "https://github.com/MarianaLimon/pluginwp-attendee-registration",
   "demo": "https://limonyya.com/ColegiodeArquitectosQtro/"
+},
+{
+  "id": 7,
+  "slug": "comercializadora-tmi",
+  "title": "Comercializadora TMI",
+  "subtitle": "Sitio web corporativo en WordPress",
+  "description": "Desarrollo de sitio web corporativo para Comercializadora TMI, enfocado en presentar sus servicios y productos de forma clara y profesional. Se trabajó en la maquetación, personalización de tema y optimización visual para transmitir confianza y solidez de marca.",
+  "year": "2025",
+  "role": "WordPress Developer",
+  "client": "Comercializadora TMI",
+  "type": "Sitio web corporativo",
+  "screenshots": [
+    "TIM_1.jpg",
+    "TIM_2.jpg",
+    "TIM_3.jpg",
+    "TIM_4.jpg"
+  ],
+  "tech": [
+    "WordPress",
+    "CSS",
+    "HTML",
+    "JavaScript",
+    "Custom Theme",
+    "Responsive Design"
+  ],
+  "highlights": [
+    "Maquetación completa del sitio web",
+    "Personalización de tema WordPress",
+    "Optimización de estructura visual y UX",
+    "Diseño responsive para dispositivos móviles",
+    "Implementación de secciones de servicios y contacto",
+    "Optimización de carga y rendimiento básico"
+  ],
+  "github": "",
+  "demo": "https://comercializadoratmi.com/"
+},
+{
+  "id": 8,
+  "slug": "enter-experiencia-web",
+  "title": "Enter",
+  "subtitle": "Experiencia de acceso web interactiva",
+  "description": "Desarrollo de una experiencia de acceso web con enfoque en impacto visual y diseño minimalista. La interfaz funciona como un punto de entrada al sitio, priorizando la estética, la tipografía y la interacción para generar una primera impresión sólida y moderna.",
+  "year": "2026",
+  "role": "Frontend Developer",
+  "client": "Proyecto personal",
+  "type": "Experiencia web",
+  "screenshots": [
+    "ENTER_1.jpg",
+    "ENTER_2.jpg",
+    "ENTER_3.jpg",
+    "ENTER_4.jpg",
+    "ENTER_5.jpg",
+    "ENTER_6.jpg"
+  ],
+  "tech": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Animations",
+    "UI Design",
+    "Responsive Design"
+  ],
+  "highlights": [
+    "Diseño minimalista centrado en tipografía",
+    "Creación de una experiencia de entrada (intro screen)",
+    "Uso de animaciones para reforzar la interacción",
+    "Enfoque en impacto visual y primera impresión",
+    "Estructura ligera y optimizada",
+    "Adaptación responsive"
+  ],
+  "github": "",
+  "demo": "https://limonyya.com/enter/"
 }
 ]

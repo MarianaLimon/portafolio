@@ -1,43 +1,85 @@
 /* ===============================
-   CONTACT LIST
+CONTACT LIST
 ================================= */
 
 .contact-list {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin-top: 18px;
-  font-size: 14px;
+display: flex;
+flex-direction: column;
+gap: 16px;
+margin-top: 18px;
+font-size: 14px;
 }
 
-/* Links y texto */
+/* ===============================
+ITEMS
+================================= */
+
 .contact-list a,
 .contact-list span {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+display: flex;
+align-items: center;
+gap: 12px;
 
-  color: #4a4a5a;
-  text-decoration: none;
+color: #a1a1aa;
+text-decoration: none;
 
-  transition: all 0.25s ease;
+transition: transform 0.25s ease, color 0.25s ease;
 }
 
-/* Iconos morados */
+/* ===============================
+ICONOS
+================================= */
+
 .contact-icon {
-  font-size: 16px;
-  color: #8f5df6;
-  flex-shrink: 0;
+font-size: 16px;
+color: #8b5cf6;
+flex-shrink: 0;
+
+transition: color 0.25s ease;
 }
 
-/* Hover elegante */
+/* ===============================
+HOVER (TU EFECTO ORIGINAL 🔥)
+================================= */
+
 .contact-list a:hover {
-  color: #8f5df6;
-  transform: translateX(4px);
+color: #ffffff;
+transform: translateX(4px); /* 🔥 vuelve perfecto */
 }
 
-/* Ubicación */
-.contact-list span {
-  cursor: default;
-  opacity: 0.85;
+.contact-list a:hover .contact-icon {
+color: #a78bfa;
 }
+
+/* ===============================
+UBICACIÓN
+================================= */
+
+.contact-list span {
+cursor: default;
+opacity: 0.75;
+}
+
+/* ===============================
+ANIMACIÓN (SIN TRANSFORM)
+================================= */
+
+@keyframes fadeOnly {
+from {
+opacity: 0;
+}
+to {
+opacity: 1;
+}
+}
+
+.contact-list > * {
+opacity: 0;
+animation: fadeOnly 0.5s ease forwards;
+}
+
+/* Stagger */
+.contact-list > *:nth-child(1) { animation-delay: 0.2s; }
+.contact-list > *:nth-child(2) { animation-delay: 0.3s; }
+.contact-list > *:nth-child(3) { animation-delay: 0.4s; }
+.contact-list > *:nth-child(4) { animation-delay: 0.5s; }

@@ -1,92 +1,131 @@
 /* ===============================
-   FOOTER WRAPPER
+FOOTER WRAPPER
 ================================= */
 
 .footer-wrapper {
-  margin-top: 80px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
+margin-top: 80px;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 20px;
 }
 
 /* ===============================
-   GLASS CONTAINER
+GLASS CONTAINER
 ================================= */
 
 .footer-glass {
-  width: 100%;
-  max-width: 900px;
+width: 100%;
+max-width: 900px;
 
-  box-sizing: border-box;
+box-sizing: border-box;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+display: flex;
+justify-content: center;
+align-items: center;
 
-  padding: 16px 24px;
-  border-radius: 18px;
+padding: 16px 24px;
+border-radius: 18px;
 
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+background: rgba(255, 255, 255, 0.04); /* 🔥 dark */
+backdrop-filter: blur(16px);
+-webkit-backdrop-filter: blur(16px);
 
-  border: 1px solid rgba(255, 255, 255, 0.4);
+border: 1px solid rgba(255, 255, 255, 0.08);
+
+box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+
+transition: all 0.25s ease;
+}
+
+/* Hover sutil */
+.footer-glass:hover {
+border-color: rgba(139, 92, 246, 0.25);
+
+box-shadow:
+0 20px 60px rgba(0, 0, 0, 0.4),
+0 0 30px rgba(139, 92, 246, 0.12);
 }
 
 /* ===============================
-   LINKS
+LINKS
 ================================= */
 
 .footer-links {
-  display: flex;
-  align-items: center;
-  gap: 40px;
+display: flex;
+align-items: center;
+gap: 40px;
 }
 
 .footer-links a {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+display: flex;
+align-items: center;
+gap: 8px;
 
-  text-decoration: none;
-  font-weight: 500;
-  color: #5b5b70;
+text-decoration: none;
+font-weight: 500;
+color: #a1a1aa;
 
-  transition: 0.2s ease;
+transition: transform 0.25s ease, color 0.25s ease;
 }
 
 .footer-links a svg {
-  color: #8f5df6;
+color: #8b5cf6;
+transition: color 0.25s ease;
 }
 
+/* Hover elegante (igual que contact 👀) */
 .footer-links a:hover {
-  color: #8f5df6;
+color: #ffffff;
+transform: translateY(-2px);
+}
+
+.footer-links a:hover svg {
+color: #a78bfa;
 }
 
 /* ===============================
-   COPY
+COPY
 ================================= */
 
 .footer-copy {
-  font-size: 13px;
-  color: #8b8ba5;
+font-size: 13px;
+color: #71717a;
 }
 
 /* ===============================
-   RESPONSIVE
+ANIMACIÓN (SIN TRANSFORM)
+================================= */
+
+@keyframes fadeOnly {
+from {
+opacity: 0;
+}
+to {
+opacity: 1;
+}
+}
+
+.footer-wrapper {
+opacity: 0;
+animation: fadeOnly 0.8s ease forwards;
+animation-delay: 0.3s;
+}
+
+/* ===============================
+RESPONSIVE
 ================================= */
 
 @media (max-width: 768px) {
 
-  .footer-glass {
-    padding: 14px 18px;
-  }
+.footer-glass {
+padding: 14px 18px;
+}
 
-  .footer-links {
-    gap: 24px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+.footer-links {
+gap: 24px;
+flex-wrap: wrap;
+justify-content: center;
+}
 
 }

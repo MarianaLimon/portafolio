@@ -1,48 +1,90 @@
 /* ===============================
-   SECTION CARD (GLASS BASE STYLE)
+SECTION CARD (GLASS DARK BASE)
 ================================= */
 
 .section-card {
-  background: rgba(255, 255, 255, 0.35);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+background: rgba(255, 255, 255, 0.04); /* 🔥 mismo que hero */
+backdrop-filter: blur(16px);
+-webkit-backdrop-filter: blur(16px);
 
-  border: 1px solid rgba(160, 130, 220, 0.15);
-  border-radius: 22px;
+border: 1px solid rgba(255, 255, 255, 0.08);
+border-radius: 22px;
 
-  padding: 26px 34px;
+padding: 26px 34px;
 
-  box-shadow: 0 20px 50px rgba(120, 90, 200, 0.06);
+box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
 
-  transition: all 0.25s ease;
+transition: all 0.25s ease;
 }
 
 .section-card:hover {
-  box-shadow: 0 25px 60px rgba(120, 90, 200, 0.10);
+border-color: rgba(139, 92, 246, 0.25);
+
+box-shadow:
+0 20px 60px rgba(0, 0, 0, 0.4),
+0 0 30px rgba(139, 92, 246, 0.12);
+}
+
+/* ===============================
+SECTION TITLE (WITH DECOR LINE)
+================================= */
+
+.section-title {
+display: flex;
+align-items: center;
+gap: 18px;
+
+font-size: 16px;
+font-weight: 600;
+letter-spacing: 0.5px;
+
+margin-bottom: 24px;
+
+color: #e4e4e7; /* 🔥 texto claro */
+}
+
+.section-title::after {
+content: "";
+flex: 1;
+height: 1px;
+
+background: rgba(255, 255, 255, 0.08); /* 🔥 línea coherente */
 }
 
 
 /* ===============================
-   SECTION TITLE (WITH DECOR LINE)
+SECTION CARD ANIMATION
 ================================= */
 
-.section-title {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-
-  font-size: 17px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-
-  margin-bottom: 24px;
-
-  color: #2d2d38;
+@keyframes fadeSoft {
+from {
+opacity: 0;
+transform: translateY(16px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
 }
 
-.section-title::after {
-  content: "";
-  flex: 1;
-  height: 1px;
-  background: rgba(120, 90, 200, 0.2);
+.section-card {
+opacity: 0;
+animation: fadeSoft 0.7s ease forwards;
+}
+
+/* Stagger entre secciones */
+.section-card:nth-of-type(1) {
+animation-delay: 0.1s;
+}
+
+.section-card:nth-of-type(2) {
+animation-delay: 0.2s;
+}
+
+.section-card:nth-of-type(3) {
+animation-delay: 0.3s;
+}
+
+.section-card:nth-of-type(4) {
+animation-delay: 0.4s;
 }

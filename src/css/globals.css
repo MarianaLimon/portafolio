@@ -13,12 +13,23 @@ body {
   min-height: 100vh;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 
-  background: linear-gradient(
-    135deg,
-    #f3efff 0%,
-    #e7dcff 50%,
-    #d9c9ff 100%
-  );
+  background: radial-gradient(
+      circle at 20% 20%,
+      rgba(139, 92, 246, 0.12),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 80% 0%,
+      rgba(99, 102, 241, 0.1),
+      transparent 40%
+    ),
+    #0b0b0f;
+
+  color: #ffffff;
+}
+
+::selection {
+  background: rgba(139, 92, 246, 0.3);
 }
 
 body.menu-open {
